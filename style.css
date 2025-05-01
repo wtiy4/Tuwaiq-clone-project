@@ -29,10 +29,12 @@ body::before {
 body {
   font-family: "IBM Plex Sans Arabic", "IBM Plex Sans Arabic Regular",
     "IBM Plex Sans Arabic SemiBold", "IBM Plex Sans Arabic Bold" sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color:#F9FAFB;
+  color: #101010;
   line-height: 1.6;
   font-size: 16px;
   font-weight: 400;
   
 }
+
+
