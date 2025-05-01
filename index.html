@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أكاديمية طويق</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.cdnfonts.com/css/ibm-plex-sans-arabic" rel="stylesheet">
     <link rel="icon" href="https://cdn.tuwaiq.edu.sa/landing/images/logo/favicon.ico" type="image/x-icon">
-                
 </head>
-<body>
-    
+
+<body class="bg-gray-50">
+    <nav class="sticky top-0 left-0 z-50 w-full px-6 bg-white shadow-md">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <a href="/" class="flex items-center">
+                <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="logo" width="152" height="32">
+            </a>
+            <div class="hidden md:flex gap-x-4 items-center">
+                <a class="px-5 py-2 font-medium rounded-lg bg-[#4931AF] text-white hover:bg-[#37258a] transition" href="/?page=%2F">الرئيسية</a>
+                <a class="px-5 py-2 font-medium rounded-lg text-gray-700 hover:bg-gray-100 transition" href="/about">حول الأكاديمية</a>
+                <a class="px-5 py-2 font-medium rounded-lg text-gray-700 hover:bg-gray-100 transition" href="/schools">الأكاديميات التابعة</a>
+                <a class="px-5 py-2 font-medium rounded-lg text-gray-700 hover:bg-gray-100 transition" href="/testcenter">مركز الاختبارات</a>
+                <a class="px-5 py-2 font-medium rounded-lg text-gray-700 hover:bg-gray-100 transition" href="/partners">الشراكات</a>
+                <a class="px-5 py-2 font-medium rounded-lg text-gray-700 hover:bg-gray-100 transition" href="/accreditations">الاعتمادات</a>
+            </div>
+            <div class="flex items-center">
+                <a class="px-5 py-2 font-medium rounded-lg bg-[#4F29B7] text-white hover:bg-[#3b1f8a] transition" href="/signin?returnUrl=%2F">تسجيل الدخول</a>
+                <button class="md:hidden text-gray-700 focus:outline-none ml-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
 </body>
+
 </html>
