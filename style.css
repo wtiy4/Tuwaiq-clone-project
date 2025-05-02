@@ -69,3 +69,53 @@ body {
   display: none;  
 }
 
+
+/* Custom highlight on hover */
+.hover-purple:hover {
+  color: #4931AF !important;
+}
+
+/* Text color for language switcher */
+.text-purple {
+  color: #4F29B7;
+}
+
+/* Brand logos scroll animation */
+.scroll-logos {
+  animation: scroll-x 20s linear infinite;
+  white-space: nowrap;
+}
+@keyframes scroll-x {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.animate-scrollX {
+  animation: scroll-x 20s linear infinite;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

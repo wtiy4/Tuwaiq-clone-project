@@ -9,983 +9,131 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://cdn.tuwaiq.edu.sa/landing/images/logo/favicon.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <style>
-    body {
-      font-family: 'IBM Plex Sans Arabic', sans-serif;
-    }
-    
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-    
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    
-    .animate-scrollX {
-      animation: scroll-x 20s linear infinite;
-    }
-    
-    @keyframes scroll-x {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-  </style>
-</head>
-
-<body class="bg-white text-gray-900">
-  <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur border-b border-gray-200">
-    <nav class="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between">
-      <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="أكاديمية طويق" width="152" height="32"
-        class="h-8 w-auto" />
-
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="/" class="bg-[#4931AF] text-white px-5 py-2 rounded-full transition hover:bg-[#3b1f8a]">الرئيسية</a>
-        <a href="/about" class="text-gray-900 hover:text-[#4931AF] transition">حول الأكاديمية</a>
-        <a href="/schools" class="text-gray-900 hover:text-[#4931AF] transition">الأكاديميات التابعة</a>
-        <a href="/testcenter" class="text-gray-900 hover:text-[#4931AF] transition">مركز الاختبارات</a>
-        <a href="/partners" class="text-gray-900 hover:text-[#4931AF] transition">الشراكات</a>
-        <a href="/accreditations" class="text-gray-900 hover:text-[#4931AF] transition">الاعتمادات</a>
-        <span class="w-px h-6 bg-gray-300"></span>
-        <button class="bg-[#E9DDFC] text-[#4F29B7] px-4 py-1.5 rounded-xl text-sm hover:bg-[#d3bdf9]">En</button>
-      </div>
-
-      <div class="flex items-center gap-4">
-        <a href="/signin"
-          class="px-5 py-2 rounded-lg bg-[#4F29B7] text-white hover:bg-[#3b1f8a] transition text-sm font-medium">تسجيل
-          الدخول</a>
-        <button class="md:hidden text-gray-700 focus:outline-none" id="mobileMenuBtn">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
-    </nav>
-    
-    <div class="md:hidden hidden bg-white border-t border-gray-200 py-2" id="mobileMenu">
-      <div class="flex flex-col space-y-3 px-4">
-        <a href="/" class="text-[#4931AF] font-medium py-2">الرئيسية</a>
-        <a href="/about" class="text-gray-900 py-2">حول الأكاديمية</a>
-        <a href="/schools" class="text-gray-900 py-2">الأكاديميات التابعة</a>
-        <a href="/testcenter" class="text-gray-900 py-2">مركز الاختبارات</a>
-        <a href="/partners" class="text-gray-900 py-2">الشراكات</a>
-        <a href="/accreditations" class="text-gray-900 py-2">الاعتمادات</a>
-        <button class="bg-[#E9DDFC] text-[#4F29B7] px-4 py-1.5 rounded-xl text-sm self-start">En</button>
-      </div>
-    </div>
-  </header>
-
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-8 lg:gap-y-10 gap-x-6">
-
-      <div
-        class="relative flex flex-col justify-between rounded-3xl overflow-hidden p-6 md:p-8 lg:p-12 bg-[#E7DDFF] col-span-1 lg:col-span-3 shadow-xl">
-        <img src="https://tuwaiq.edu.sa/img/Tuwaiq_mounten.png" alt=""
-          class="absolute object-contain w-10/12 h-auto -bottom-6 -left-32 md:z-10 opacity-60 md:opacity-100 lg:-left-96 md:-left-40" />
-
-        <div class="relative z-20 flex flex-col gap-4 w-full lg:w-4/5 xl:w-2/3">
-          <h1 class="text-[#4F29B7] text-2xl md:text-4xl lg:text-5xl leading-snug font-bold">تعلم تقنيات المستقبل</h1>
-          <h2 class="text-[#4F29B7] text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug">في مكــــانٍ واحــــــد</h2>
-          <p class="text-[#5C5C5C] text-sm md:text-base xl:text-lg leading-relaxed">
-            معسكرات وبرامج احترافية بالشراكة مع كبرى الجهات العالمية؛ لتطوير مهاراتك في مجالات التقنيات الحديثة،
-            بمنهجيّة تعلُّم قائمة على التطبيقات العملية، ضمن بيئة تعليمية محفزة وتنافسية.
-          </p>
-          <button
-            class="flex gap-2 items-center text-[#4F29B7] border-2 border-[#4F29B7] text-lg md:text-xl lg:text-2xl py-2 px-6 md:px-8 lg:px-12 bg-white rounded-xl lg:rounded-2xl shadow-[5px_5px_#4F29B7] hover:shadow-none hover:bg-[#E9DDFC] transition duration-300 w-fit"
-            onclick="window.location.href='/bootcamps'">
-            ابدأ
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 11v2H8v2H6v-2H4v-2h2V9h2v2h12z" />
-            </svg>
-          </button>
-        </div>
-
-        <div class="absolute bottom-5 left-0 right-0 z-20">
-          <div class="flex gap-8 whitespace-nowrap animate-scrollX px-4 md:px-8">
-            <img src="https://tuwaiq.edu.sa/img/Brands/Apple.png" class="h-4 md:h-5" alt="Apple" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/aws.png" class="h-4 md:h-5" alt="AWS" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/cn.png" class="h-4 md:h-5" alt="Cisco" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/ct.png" class="h-4 md:h-5" alt="CompTIA" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/ibm.png" class="h-4 md:h-5" alt="IBM" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/meta.png" class="h-4 md:h-5" alt="Meta" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/microsoft.png" class="h-4 md:h-5" alt="Microsoft" />
-            <img src="https://tuwaiq.edu.sa/img/Brands/ac2.png" class="h-4 md:h-5" alt="Academy" />
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-6 col-span-1">
-        <div class="bg-[#BFFFFA] p-6 rounded-3xl text-right shadow-sm">
-          <p class="text-[#00877D] text-sm font-medium mb-2 leading-snug">عدد المسجلين في المعسكرات والبرامج حتى الآن
-          </p>
-          <p id="count" class="text-[#00877D] text-2xl font-bold">0</p>
-        </div>
-
-        <div
-          class="flex flex-col justify-between py-8 lg:py-10 min-h-[320px] md:min-h-[350px] bg-[#FFDDE1] border border-[#DFDFDF] rounded-[20px] relative overflow-hidden shadow-xl">
-          <div class="flex flex-col gap-4 w-full max-w-[500px] mx-auto px-6 lg:px-8">
-            <div class="flex items-start justify-between">
-              <h2 class="text-[#FF536D] text-xl md:text-2xl font-semibold leading-8 text-right">
-                هولبيرتون <br />المسار التأسيسي
-              </h2>
-              <a href="https://tuwaiq.edu.sa/bootcamp/3APj5WXE/view" target="_blank"
-                class="flex items-center px-3 py-2 gap-2 bg-[#FF536D] rounded-full h-8 text-xs font-medium text-white hover:bg-[#e64057] transition">
-                سجل الآن
-                <svg class="w-[10px] h-[10px]" xmlns="http://www.w3.org/2000/svg" fill="white"
-                  viewBox="0 0 384 512">
-                  <path
-                    d="M48 96c-8.8 0-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V150.6L324.7 411.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L86.6 128H272c8.8 0 16-7.2 16-16s-7.2-16-16-16H48z" />
-                </svg>
-              </a>
-            </div>
-            <p class="text-[#505050] text-[13px] leading-5 text-right">
-              المسار التأسيسي لأكاديمية هولبيرتون العالمية الأولى في الشرق الأوسط
-            </p>
-          </div>
-          <div class="flex justify-center mt-8">
-            <img
-              src="img/solve.png"
-              alt="Holberton by Tuwaiq Academy"
-              class="w-full max-w-xs object-contain"/>
-
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="max-w-[1600px] mx-auto px-4 py-8 md:py-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      <div
-        class="relative transition group hover:shadow-[8px_8px_#6e91c3] duration-300 overflow-hidden rounded-3xl bg-[#BED9FF] h-full w-full min-h-[350px] md:min-h-[400px] p-6 md:p-10 pb-0 flex flex-col justify-between"
-      >
-        <div class="flex items-center justify-between w-full mb-4">
-          <h3 class="text-xl md:text-2xl font-semibold">المعسكرات</h3>
-          <a
-            href="/bootcamps"
-            class="relative flex items-center justify-center w-10 md:w-12 h-10 md:h-12 overflow-hidden duration-500 ease-in-out bg-white rounded-full group-hover:pl-4 group-hover:pr-4 group-hover:w-28"
-          >
-            <span
-              class="ml-8 text-black transition duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-            >
-              المزيد
-            </span>
-            <svg
-              class="absolute left-[15px] group-hover:mr-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="24"
-              viewBox="0 0 384 512"
-            >
-              <path
-                d="M48 96c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-185.4L324.7 411.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L86.6 128 272 128c8.8 0 16-7.2 16-16s-7.2-16-16-16L48 96z"
-              />
-            </svg>
-          </a>
-        </div>
-        <p class="mb-6 w-full text-[#5C5C5C] text-sm md:text-base">
-          معسكرات منتهية بالتوظيف للمتميزين، مبنيّة على احتياجات سوق العمل،
-          تقام لمدة 1-9 أشهر بشهادات احترافية في العديد من المجالات التقنية.
-        </p>
-        <div class="flex justify-center w-full pt-8">
-          <img
-            class="max-w-[70%] md:max-w-[80%] bottom-4"
-            src="https://tuwaiq.edu.sa/img/ART/Asset%201.png"
-            alt="معسكرات تدريبية"
-          />
-        </div>
-      </div>
-
-      <div
-        class="relative transition group hover:shadow-[8px_8px_#f3b5c7] duration-300 overflow-hidden rounded-3xl bg-[#FFE7EF] h-full w-full min-h-[350px] md:min-h-[400px] p-6 md:p-10 pb-0 flex flex-col justify-between"
-      >
-        <div class="flex items-center justify-between w-full mb-4">
-          <h3 class="text-xl md:text-2xl font-semibold">البرامج</h3>
-          <a
-            href="/programs"
-            class="relative flex items-center justify-center w-10 md:w-12 h-10 md:h-12 overflow-hidden duration-500 ease-in-out bg-white rounded-full group-hover:pl-4 group-hover:pr-4 group-hover:w-28"
-          >
-            <span
-              class="ml-8 text-black transition duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-            >
-              المزيد
-            </span>
-            <svg
-              class="absolute left-[15px] group-hover:mr-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="24"
-              viewBox="0 0 384 512"
-            >
-              <path
-                d="M48 96c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-185.4L324.7 411.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L86.6 128 272 128c8.8 0 16-7.2 16-16s-7.2-16-16-16L48 96z"
-              />
-            </svg>
-          </a>
-        </div>
-        <p class="mb-6 w-full text-[#5C5C5C] text-sm md:text-base">
-          برامج احترافية لمدة 1-3 أسابيع، تستهدف تطوير قدراتك التقنية؛
-          بمنهجيّة تعلُّم نوعية، وبيئة تنافسية.
-        </p>
-        <div class="flex justify-center w-full pt-8">
-          <img
-            class="max-w-[60%] md:max-w-[70%] bottom-4"
-            src="https://tuwaiq.edu.sa/img/art_for_programs.svg"
-            alt="البرامج التدريبية"
-          />
-        </div>
-      </div>
-
-      <div
-        class="relative transition group hover:shadow-[8px_8px_#b3e6bc] duration-300 overflow-hidden rounded-3xl bg-[#D3FFD5] h-full w-full min-h-[350px] md:min-h-[400px] p-6 md:p-10 pb-0 flex flex-col justify-between"
-      >
-        <div class="flex items-center justify-between w-full mb-4">
-          <h3 class="text-xl md:text-2xl font-semibold">اللقاءات</h3>
-          <a
-            href="/meetups"
-            class="relative flex items-center justify-center w-10 md:w-12 h-10 md:h-12 overflow-hidden duration-500 ease-in-out bg-white rounded-full group-hover:pl-4 group-hover:pr-4 group-hover:w-28"
-          >
-            <span
-              class="ml-8 text-black transition duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-            >
-              المزيد
-            </span>
-            <svg
-              class="absolute left-[15px] group-hover:mr-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="24"
-              viewBox="0 0 384 512"
-            >
-              <path
-                d="M48 96c-8.8 0-16 7.2-16 16l0 224c0 8.8 7.2 16 16 16s16-7.2 16-16l0-185.4L324.7 411.3c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L86.6 128 272 128c8.8 0 16-7.2 16-16s-7.2-16-16-16L48 96z"
-              />
-            </svg>
-          </a>
-        </div>
-        <p class="mb-6 w-full text-[#5C5C5C] text-sm md:text-base">
-          لقاءات معرفيّة تُقام بالتعاون مع جهات رائدة، تناقش موضوعات تقنية،
-          وأعمال، وتواصل.
-        </p>
-        <div class="flex justify-center w-full pt-8">
-          <img
-            class="max-w-[55%] md:max-w-[65%] bottom-4"
-            src="https://tuwaiq.edu.sa/img/ART/Asset%203.svg"
-            alt="اللقاءات"
-          />
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-<section class="flex flex-col w-full gap-6">
-  <div class="relative p-6 mx-auto w-full max-w-[1680px]">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex items-center gap-8">
-        <p class="text-[28px] font-medium tracking-tighter text-black">
-          ينتهي التسجيل قريبًا
-        </p>
-        <a
-          href="/bootcamps?category=c616115c-5cf8-426d-9f70-42eb370ca37d&type=NORMAL"
-          class="flex gap-2 text-[#64ABFF] text-base font-medium items-center"
-        >
-          عرض المزيد
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="m15 5l-6 7l6 7"
-            />
-          </svg>
-        </a>
-      </div>
-
-      <div class="hidden md:flex gap-4 flex-row-reverse">
-        <button id="prevBtn" aria-label="السابق" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#EEEEEE]">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="h-7 w-7 text-[#868686]">
-            <path
-              fill-rule="evenodd"
-              d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-        <button id="nextBtn" aria-label="التالي" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#EEEEEE]">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="h-7 w-7 text-[#868686]">
-            <path
-              fill-rule="evenodd"
-              d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="mt-8 md:mt-16">
-      <div id="carousel" class="flex overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide">
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/fyslu0tm.5x3.png"
-              alt="Course 1"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">البرامج التنفيذية</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              برنامج Excel للمبتدئين
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>برنامج - أسبوع</span>
-              <span>كبار</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد غد</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/psvxh1jc.vwh.png"
-              alt="Course 2"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">هندسة الميكاترونكس</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              أساسيات الميكاترونكس
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>برنامج - أسبوعين</span>
-              <span>ناشئين</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 23 يوم</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/pxhazeai.5tg.png"
-              alt="Course 3"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">علم البيانات والذكاء الاصطناعي</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              أساسيات الذكاء الاصطناعي
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>برنامج - أسبوعين</span>
-              <span>ناشئين</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 9 أيام</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/pxhazeai.5tg.png"
-              alt="Course 4"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">علم البيانات والذكاء الاصطناعي</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              تطبيق قاعدة بيانات SQL باستخدام لغة Python
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>برنامج - أسبوع</span>
-              <span>كبار</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 9 أيام</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/mgpdsgmm.alx.png"
-              alt="Course 5"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">تطوير البرمجيات والتطبيقات</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              تطوير مواقع الويب باستخدام لغة Python
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>معسكر - ١٢ أسبوع</span>
-              <span>كبار</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 44 يوم</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/mgpdsgmm.alx.png"
-              alt="Course 6"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">تطوير البرمجيات والتطبيقات</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              أساسيات لغة البرمجة Python
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>برنامج - أسبوعين</span>
-              <span>ناشئين</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 23 يوم</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/psvxh1jc.vwh.png"
-              alt="Course 7"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">هندسة الميكاترونكس</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              أساسيات الميكاترونكس
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>برنامج - أسبوعين</span>
-              <span>ناشئين</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 23 يوم</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-[356px] h-[538px] bg-[#F5F5F7] rounded-3xl p-8 flex flex-col justify-between shrink-0 snap-start">
-          <div class="flex justify-center items-center h-[290px]">
-            <img
-              src="https://cdn.tuwaiq.edu.sa/initiatives_admin/images/pxhazeai.5tg.png"
-              alt="Course 8"
-              class="object-contain w-full h-full rounded-lg"
-            />
-          </div>
-          <div class="flex flex-col">
-            <p class="text-[12px] text-[#5A5A5A]">علم البيانات والذكاء الاصطناعي</p>
-            <blockquote class="text-lg font-semibold text-black md:text-[17px]">
-              الذكاء الاصطناعي وتعلم الآلة
-            </blockquote>
-            <div class="flex text-xs font-semibold gap-x-6 text-[#C56B37]">
-              <span>معسكر - ٥ أسابيع</span>
-              <span>ناشئين</span>
-            </div>
-            <div class="flex items-center gap-2 mt-6">
-              <span class="w-2 h-2 rounded-full bg-[#10A400]"></span>
-              <p class="text-xs font-medium text-[#10A400]">ينتهي بعد 58 يوم</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-</section>
-
-
-
-  <section dir="rtl" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-        <h2 class="text-xl md:text-3xl font-bold">أحدث دورات منصة سطر</h2>
-        <a
-          href="https://satr.codes/"
-          target="_blank"
-          class="hidden md:inline-flex items-center justify-center gap-2 text-white text-lg h-12 px-4 rounded-2xl bg-gradient-to-l from-[#d54bae] to-[#f1627a] hover:opacity-90 transition-colors"
-        >
-          ابدأ بالتعلم
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 rotate-[220deg]" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-  
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <a
-          href="https://satr.codes/course/sx8doDZi2s/view"
-          class="block bg-gradient-to-br from-[#F6F8FE] to-white rounded-2xl border border-[#DBD3F9] hover:shadow-lg transition-shadow overflow-hidden"
-        >
-          <div class="p-6 flex flex-col h-full">
-            <div class="relative bg-white rounded-2xl p-2 border border-[#DBD3F9]">
-              <span class="absolute top-3 right-3 bg-[#D8EDF7] text-[#4DC0DA] px-2 py-1 rounded-lg text-sm">احدث الدورات</span>
-              <img
-                src="https://satr.codes/satr-white-placeholder-logo-dark.e15b498723047344d3a1363a54c646d9.svg"
-                alt="Flutter 103"
-                class="w-full h-48 object-contain"
-              />
-            </div>
-            <div class="mt-5 flex-1 flex flex-col">
-              <h3 class="text-xl font-semibold mb-2">Flutter 103</h3>
-              <div class="flex items-center text-sm text-gray-600 mb-3 space-x-2 rtl:space-x-reverse">
-                <span>متوسط</span>
-                <span>·</span>
-                <span>17973 مشترك</span>
-                <span>·</span>
-                <span>00:56:32</span>
-              </div>
-              <p class="text-gray-600 mb-4 overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]">
-                تهدف الدورة للتعرف على كيفية بناء واجهات تفاعلية باستخدام أدوات Flutter المتنوعة،
-                والبدء بتخطيط الواجهات باستخدام Stack وExpanded، ثم تحسين تجربة المستخدم
-                من خلال مجموعة أدوات مثل ListView وGridView، والتعرف على كيفية إضافة أدوات
-                تفاعلية مثل Gesture Detector لجعل التطبيق أكثر تفاعلًا واستجابة للمستخدم.
-              </p>
-            </div>
-          </div>
-        </a>
-  
-        <a
-          href="https://satr.codes/course/EZOmLn9dQn/view"
-          class="block bg-gradient-to-br from-[#F6F8FE] to-white rounded-2xl border border-[#DBD3F9] hover:shadow-lg transition-shadow overflow-hidden"
-        >
-          <div class="p-6 flex flex-col h-full">
-            <div class="relative bg-white rounded-2xl p-2 border border-[#DBD3F9]">
-              <span class="absolute top-3 right-3 bg-[#D8EDF7] text-[#4DC0DA] px-2 py-1 rounded-lg text-sm">احدث الدورات</span>
-              <img
-                src="https://assets.safcsp.cloud/d46d6d81-8ab9-44fd-884d-b9b6ee3e336a/asset/f487b240-d933-4c6c-8f12-e6787de6271d.png"
-                alt="أمن الشبكات 101"
-                class="w-full h-48 object-contain"
-              />
-            </div>
-            <div class="mt-5 flex-1 flex flex-col">
-              <h3 class="text-xl font-semibold mb-2">أمن الشبكات 101</h3>
-              <div class="flex items-center text-sm text-gray-600 mb-3 space-x-2 rtl:space-x-reverse">
-                <span>مبتدئ</span>
-                <span>·</span>
-                <span>4545 مشترك</span>
-                <span>·</span>
-                <span>01:19:51</span>
-              </div>
-              <p class="text-gray-600 mb-4 overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]">
-                تهدف دورة أمن الشبكات إلى تزويد المتدربين بالمعرفة والمهارات اللازمة لحماية
-                الشبكات من التهديدات الإلكترونية المتزايدة، من خلال التعرف على تصميم الشبكات
-                الآمنة، بالإضافة إلى تعلم ماهي الأجهزة والأنظمة المستخدمة في تأمين الشبكة،
-                والتعرف على أدوات الشبكة.
-              </p>
-            </div>
-          </div>
-        </a>
-  
-        <a
-          href="https://satr.codes/path/E0v6z0oS6R/view"
-          class="block bg-gradient-to-br from-[#F6F8FE] to-white rounded-2xl border border-[#DBD3F9] hover:shadow-lg transition-shadow overflow-hidden"
-        >
-          <div class="p-6 flex flex-col h-full">
-            <div class="relative bg-white rounded-2xl p-2 border border-[#DBD3F9]">
-              <span class="absolute top-3 right-3 bg-[#6635D733] text-[#6635D7] px-2 py-1 rounded-lg text-sm">احدث المسارات</span>
-              <img
-                src="https://assets.safcsp.cloud/d46d6d81-8ab9-44fd-884d-b9b6ee3e336a/asset/2896f92b-c2fd-4fd7-8e3a-abd336352237.png"
-                alt="مسار أساسيات الأمن السيبراني"
-                class="w-full h-48 object-contain"
-              />
-            </div>
-            <div class="mt-5 flex-1 flex flex-col">
-              <h3 class="text-xl font-semibold mb-2">مسار أساسيات الأمن السيبراني</h3>
-              <div class="flex items-center text-sm text-gray-600 mb-3 space-x-2 rtl:space-x-reverse">
-                <span>مبتدئ</span>
-                <span>·</span>
-                <span>2766 مشترك</span>
-                <span>·</span>
-                <span>04:52:21</span>
-              </div>
-              <p class="text-gray-600 mb-4 overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]">
-                يهدف المسار إلى تقديم رحلة متكاملة تبدأ بمفاهيم الأمن السيبراني الأساسية،
-                ثم إتقان إدارة أنظمة Linux وتوزيعة Kali Linux لأدوات الأمن بعدها، يتعمق في
-                فهم التهديدات والثغرات الأمنية وأساسيات تأمين الشبكات وتقنيات التشفير بأنواعه؛
-                كما يركز على حماية الأنظمة والتطبيقات، وتنفيذ تكوينات أمنية متوافقة مع المعايير،
-                وتعلم حماية البيانات، والاستجابة للحوادث، وانتهاءً بمبادئ الحوكمة وإدارة المخاطر (GRC).
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-  
-      <div class="mt-8 grid place-items-center md:hidden">
-        <a
-          href="https://satr.codes/"
-          target="_blank"
-          class="inline-flex items-center justify-center gap-2 text-white text-md h-12 px-4 rounded-2xl bg-gradient-to-l from-[#d54bae] to-[#f1627a] hover:opacity-90 transition-colors"
-        >
-          ابدأ بالتعلم
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 rotate-[220deg]" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-  
-
-  <section
-  class="flex flex-col w-full bg-[#F5F5F7] gap-6 px-4 sm:px-0"
->
-  <div class="max-w-[1680px] mx-auto w-full py-4 flex flex-col gap-y-6">
-    <p class="text-[28px] font-semibold tracking-tighter text-black w-fit">
-      أرقام الأكاديمية
-    </p>
-
-    <div class="flex flex-col items-start justify-center gap-6 lg:flex-row">
-      <div
-        class="w-full lg:w-[363px] h-[645px] bg-white rounded-[20px] flex flex-col justify-between relative overflow-hidden"
-      >
-        <div class="px-10 py-8 space-y-3">
-          <h1 class="text-[20px] font-normal text-black">شراكة عالمية</h1>
-          <h2 class="text-2xl font-semibold text-black">+60</h2>
-          <span class="text-xs font-normal text-[#7F7F7F]">شركة</span>
-        </div>
-        <img
-          src="https://tuwaiq.edu.sa/img/numbers_hero.png"
-          alt=""
-          class="absolute bottom-0 left-0 w-[120%] h-full object-cover"
-        />
-      </div>
-
-      <div class="flex flex-col gap-6 w-full lg:w-[925px]">
-        <div class="flex flex-col gap-6 md:flex-row">
-          <div
-            class="bg-white rounded-[20px] p-10 w-full md:w-[400px] h-[310px] flex flex-col justify-between relative overflow-hidden"
-          >
-            <div class="space-y-3">
-              <h1 class="text-[20px] font-normal text-black">
-                عدد المعسكرات والبرامج
-              </h1>
-              <h2 class="text-2xl font-semibold text-black">1,836</h2>
-              <span class="text-xs font-normal text-[#7F7F7F]">
-                معسكر وبرنامج
-              </span>
-            </div>
-            <img
-              src="https://tuwaiq.edu.sa/img/numberOfBootcampsAndPrograms.png"
-              alt=""
-              class="absolute bottom-0 left-0 object-contain"
-            />
-          </div>
-
-          <div
-            class="bg-white rounded-[20px] p-10 w-full md:w-[501px] h-[310px] flex flex-col justify-between relative overflow-hidden"
-          >
-            <div class="space-y-3">
-              <h1 class="text-[20px] font-normal text-black">عــدد الخريجين</h1>
-              <h2 class="text-2xl font-semibold text-black">32,016</h2>
-              <span class="text-xs font-normal text-[#7F7F7F]">
-                متدرب حضوري
-              </span>
-            </div>
-            <img
-              src="https://tuwaiq.edu.sa/img/numberOfInPersonTrainees.png"
-              alt=""
-              class="absolute bottom-0 left-0 object-contain"
-            />
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-6 md:flex-row">
-          <div
-            class="bg-white rounded-[20px] p-10 w-full md:w-[501px] h-[310px] flex flex-col justify-between relative overflow-hidden"
-          >
-            <div class="space-y-3">
-              <h1 class="text-[20px] font-normal text-black">منــصــة ســـطــر</h1>
-              <h2 class="text-2xl font-semibold text-black">888,523</h2>
-              <span class="text-xs font-normal text-[#7F7F7F]">متدرب</span>
-            </div>
-            <img
-              src="https://tuwaiq.edu.sa/img/SatrPlatform.png"
-              alt=""
-              class="absolute bottom-0 left-0 object-contain"
-            />
-          </div>
-
-          <div
-            class="bg-white rounded-[20px] p-10 w-full md:w-[400px] h-[310px] flex flex-col justify-between relative overflow-hidden"
-          >
-            <div class="space-y-3">
-              <h1 class="text-[20px] font-normal text-black">
-                نسبة توظيف خريجي المعسكرات
-              </h1>
-              <h2 class="text-2xl font-semibold text-black">80%</h2>
-              <span class="text-xs font-normal text-[#7F7F7F]">موظف</span>
-            </div>
-            <img
-              src="https://tuwaiq.edu.sa/img/numberOfHiredGraduted.png"
-              alt=""
-              class="absolute bottom-0 left-0 object-contain"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <section class="w-full bg-white px-4 sm:px-0 py-8">
-    <div class="max-w-[1680px] mx-auto flex flex-col gap-6">
-      <h2 class="text-[32px] sm:text-[36px] font-semibold tracking-tighter text-black w-fit">
-        آخر الأخبار
-      </h2>
-      <div class="flex gap-6 overflow-x-auto pb-4 snap-x">
-        <div
-          class="relative min-w-[300px] sm:min-w-[400px] h-[550px] rounded-[20px] overflow-hidden flex-shrink-0 snap-start">
-          <img src="https://cdn.tuwaiq.edu.sa/landing/news/hg1ea1q1.4at.jpg" alt="خبر 1"
-            class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent z-10"></div>
-          <div class="absolute bottom-20 px-6 text-white z-20 text-lg font-medium leading-loose">
-            أكاديمية طويق تطلق برنامج قادة تقنيـا...
-          </div>
-          <div class="absolute bottom-6 start-6 text-white text-sm z-20">
-            06/04/2025
-          </div>
-        </div>
-
-        <div
-          class="relative min-w-[300px] sm:min-w-[400px] h-[550px] rounded-[20px] overflow-hidden flex-shrink-0 snap-start">
-          <img src="https://cdn.tuwaiq.edu.sa/landing/news/ce2t3lcl.su1.png" alt="خبر 2"
-            class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent z-10"></div>
-          <div class="absolute bottom-20 px-6 text-white z-20 text-lg font-medium leading-loose">
-            أكاديمية طويق تحتفي بفوز طالباتها في تحدي آبل العالمي
-          </div>
-          <div class="absolute bottom-6 start-6 text-white text-sm z-20">
-            10/04/2025
-          </div>
-        </div>
-
-        <div
-          class="relative min-w-[300px] sm:min-w-[400px] h-[550px] rounded-[20px] overflow-hidden flex-shrink-0 snap-start">
-          <img src="https://cdn.tuwaiq.edu.sa/landing/news/15mnxx1h.n5k.png" alt="خبر 3"
-            class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent z-10"></div>
-          <div class="absolute bottom-20 px-6 text-white z-20 text-lg font-medium leading-loose">
-            طلاب أكاديمية طويق يحققون 4 ميداليات في مسابقة جنيف الدولية
-          </div>
-          <div class="absolute bottom-6 start-6 text-white text-sm z-20">
-            13/04/2025
-          </div>
-        </div>
-
-        <div
-          class="relative min-w-[300px] sm:min-w-[400px] h-[550px] rounded-[20px] overflow-hidden flex-shrink-0 snap-start">
-          <img src="https://cdn.tuwaiq.edu.sa/landing/news/wdpsjse5.zqv.jpeg" alt="خبر 4"
-            class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent z-10"></div>
-          <div class="absolute bottom-20 px-6 text-white z-20 text-lg font-medium leading-loose">
-            إطلاق "أكاديمية الكراج" بالشراكة مع أكاديمية طويق
-          </div>
-          <div class="absolute bottom-6 start-6 text-white text-sm z-20">
-            05/05/2025
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="h-auto px-4 sm:px-0 max-w-[1680px] mx-auto w-full">
-    <div class="flex flex-col md:flex-row justify-between items-center rounded-3xl px-[50px] py-[30px] bg-[#B4EBE7]">
-      <div class="w-full md:w-2/3">
-        <form class="md:w-2/3">
-          <p class="w-full pr-4 mt-2 mb-12 text-3xl md:text-4xl font-semibold tracking-tighter text-[#6438dd]">
-            اشترك في النشرة البريدية
-          </p>
-
-          <div class="grid md:grid-cols-2 md:gap-6 md:mb-5">
-            <input type="text" placeholder="الاسم الأول"
-              class="md:h-[63px] h-14 text-lg md:text-2xl text-gray-500 placeholder-gray-300 border-0 rounded-2xl pr-8 block w-full p-2.5 mb-5"
-              required />
-            <input type="text" placeholder="الاسم الأخير"
-              class="md:h-[63px] h-14 text-lg md:text-2xl text-gray-500 placeholder-gray-300 border-0 rounded-2xl pr-8 block w-full p-2.5 mb-5"
-              required />
-          </div>
-
-          <div class="flex flex-col md:flex-row items-center gap-6">
-            <input type="email" placeholder="name@email.com"
-              class="block p-2.5 pr-8 w-full h-14 text-lg md:text-2xl text-gray-500 placeholder-gray-300 rounded-2xl border-0 md:h-[63px]"
-              required />
-
-            <button type="submit"
-              class="flex flex-row items-center justify-center gap-4 w-full md:w-6/12 md:h-[63px] h-20 text-2xl bg-[#4F29B7] hover:bg-[#724fd1] duration-300 font-medium rounded-2xl px-5 py-2.5 text-white">
-              اشترك الآن
-              <svg class="w-[2.3rem] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path opacity="1"
-                  d="M0 288c0 .7 0 1.3 .1 2c.8 12.2 8.4 22.9 19.6 27.6l112 46.7L160 376l0-8c0-4.2 1.7-8.3 4.7-11.3l13-13c59.6-59.6 119.2-119.2 178.8-178.7c.1-.1 .2-.2 .2-.3c3-3 6.8-4.5 10.7-4.7s7.9 1.1 11 3.9c3.7 3.3 5.6 7.7 5.6 12.1c0 3.4-1.1 6.8-3.3 9.7L224 389.4l0 13.2c20 8.3 40 16.7 60 25c39.9 16.6 79.8 33.2 119.7 49.9c9.1 3.8 19.4 3.2 28-1.6s14.5-13.3 16-23l64-416c1.9-12.1-3.4-24.3-13.5-31.2C492.7 1.9 486.4 0 480 0c-5.5 0-10.9 1.4-15.9 4.2l-448 256C6.1 265.9 0 276.6 0 288z" />
-                <path opacity="0.4"
-                  d="M380.7 185.8c5.1-6.7 4.2-16.2-2.1-21.8s-15.9-5.3-21.9 .7l-179 179-13 13c-3 3-4.7 7.1-4.7 11.3l0 8 0 56 0 48c0 13.2 8.1 25 20.3 29.8s26.2 1.6 35.2-8.1L284 427.7l-60-25 0-13.2L380.7 185.8z" />
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <div class="hidden md:flex w-72 -mb-[30px]">
-        <img src="https://tuwaiq.edu.sa/img/ART/Asset%209.svg" alt="رسالة بريدية" />
-      </div>
-    </div>
-  </section>
-
-  <footer class="w-full max-w-[1680px] mx-auto sm:mb-4 px-4 sm:px-0 pb-4 mt-10">
-    <div class="bg-[#E3D8FF] rounded-3xl overflow-hidden">
-      <div class="w-full max-w-7xl mx-auto p-6 lg:p-8">
-        <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-          <div class="mb-6 md:mb-0">
-            <a href="/" class="flex items-center justify-center">
-              <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="Tuwaiq Academy" class="h-16">
-            </a>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16">
-            <div>
-              <ul class="text-[#4F29B7] font-medium text-center sm:text-right">
-                <li class="mb-4">
-                  <a href="https://tuwaiq.edu.sa/form/YxdJKJwy" class="hover:underline transition-all duration-300">شارك كمدرب</a>
-                </li>
-                <li>
-                  <a href="/about" class="hover:underline transition-all duration-300">حول الأكاديمية</a>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <ul class="text-[#4F29B7] font-medium text-center sm:text-right">
-                <li class="mb-4">
-                  <a href="/privacy" class="hover:underline transition-all duration-300">سياسة الخصوصية</a>
-                </li>
-                <li>
-                  <a href="/terms" class="hover:underline transition-all duration-300">الشروط والأحكام</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8">
-        <div class="flex flex-col-reverse md:flex-row md:justify-between items-center">
-          <span class="text-sm mt-6 md:mt-0 text-[#4F29B7] text-center md:text-right">
-            © 2025 <a href="https://tuwaiq.edu.sa/" class="hover:underline">أكاديمية طويق</a>.
-            جميع الحقوق محفوظة.
-          </span>
-
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://www.linkedin.com/company/tuwaiqacademy" class="transition-all duration-300" aria-label="LinkedIn">
-              <div class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
-                <i class="bi bi-linkedin"></i>
-              </div>
-            </a>
-
-            <a href="https://www.snapchat.com/add/tuwaiqacademy" class="transition-all duration-300" aria-label="Snapchat">
-              <div class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
-                <i class="bi bi-snapchat"></i>
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/channel/UC_pOwgeaVK7bg3z7fJB5N8w" class="transition-all duration-300" aria-label="YouTube">
-              <div class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
-                <i class="bi bi-youtube"></i>
-              </div>
-            </a>
-
-            <a href="https://twitter.com/TuwaiqAcademy" class="transition-all duration-300" aria-label="Twitter">
-              <div class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
-                <i class="bi bi-twitter-x"></i>
-              </div>
-            </a>
-
-            <a href="https://discord.gg/DWpUH7wFxj" class="transition-all duration-300" aria-label="Discord">
-              <div class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
-                <i class="bi bi-discord"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    let i = 0,
-      t = 1716154,
-      s = 2000,
-      d = (t / s) * 10,
-      r = setInterval(() => {
-        i += d;
-        document.getElementById("count").textContent = Math.min(
-          Math.floor(i),
-          t
-        ).toLocaleString();
-        if (i >= t) clearInterval(r);
-      }, 10);
-  </script>
+<!-- 
+  <script src="https://cdn.tailwindcss.com"></script> -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const carousel = document.getElementById("carousel");
-      const nextBtn = document.getElementById("nextBtn");
-      const prevBtn = document.getElementById("prevBtn");
-
-      const scrollAmount = 380;
-
-      nextBtn.addEventListener("click", () => {
-        carousel.scrollBy({
-          left: scrollAmount,
-          behavior: "smooth",
-        });
-      });
-
-      prevBtn.addEventListener("click", () => {
-        carousel.scrollBy({
-          left: -scrollAmount,
-          behavior: "smooth",
-        });
+      const btn = document.getElementById("mobileMenuBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("d-none");
       });
     });
   </script>
+  
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- Bootstrap Header with RTL & Custom Styles -->
+<header class="sticky-top bg-white border-bottom shadow-sm" dir="rtl">
+  <nav class="container-fluid py-3 d-flex align-items-center justify-content-between">
+    <!-- Logo -->
+    <a href="/" class="d-flex align-items-center">
+      <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="أكاديمية طويق" style="height: 32px;" />
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="d-none d-md-flex align-items-center gap-3 mb-0 list-unstyled fw-medium small">
+      <li><a href="/" class="btn btn-primary px-4 rounded-pill" style="background-color:#4931AF; border: none;">الرئيسية</a></li>
+      <li><a href="/about" class="text-dark text-decoration-none hover-purple">حول الأكاديمية</a></li>
+      <li><a href="/schools" class="text-dark text-decoration-none hover-purple">الأكاديميات التابعة</a></li>
+      <li><a href="/testcenter" class="text-dark text-decoration-none hover-purple">مركز الاختبارات</a></li>
+      <li><a href="/partners" class="text-dark text-decoration-none hover-purple">الشراكات</a></li>
+      <li><a href="/accreditations" class="text-dark text-decoration-none hover-purple">الاعتمادات</a></li>
+      <li class="vr mx-2"></li>
+      <li><button class="btn btn-sm rounded-pill text-purple" style="background-color:#E9DDFC;">En</button></li>
+    </ul>
+
+    <!-- Mobile Toggle & Sign in -->
+    <div class="d-flex align-items-center gap-3">
+      <a href="/signin" class="btn btn-sm px-4 text-white" style="background-color:#4F29B7;">تسجيل الدخول</a>
+      <button class="d-md-none btn btn-light p-2 border" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+        <i class="bi bi-list fs-4 text-dark"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="d-none border-top px-4 py-2" id="mobileMenu">
+    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 fw-medium small">
+      <li><a href="/" class="text-primary fw-bold text-decoration-none py-1">الرئيسية</a></li>
+      <li><a href="/about" class="text-dark text-decoration-none py-1">حول الأكاديمية</a></li>
+      <li><a href="/schools" class="text-dark text-decoration-none py-1">الأكاديميات التابعة</a></li>
+      <li><a href="/testcenter" class="text-dark text-decoration-none py-1">مركز الاختبارات</a></li>
+      <li><a href="/partners" class="text-dark text-decoration-none py-1">الشراكات</a></li>
+      <li><a href="/accreditations" class="text-dark text-decoration-none py-1">الاعتمادات</a></li>
+      <li><button class="btn btn-sm rounded-pill text-purple mt-2" style="background-color:#E9DDFC;">En</button></li>
+    </ul>
+  </div>
+</header>
+
+
+  
+<footer class="w-100 px-4 pb-4 mt-5" dir="rtl" style="background-color: #E3D8FF; border-radius: 1.5rem;">
+  <div class="container py-4 py-lg-5">
+    <div class="row align-items-center mb-4">
+      <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+        <a href="/?page=%2F" class="d-flex justify-content-center justify-content-md-start align-items-center">
+          <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="Tuwaiq" style="height: 5rem;" />
+        </a>
+      </div>
+      <div class="col-md-8">
+        <div class="row row-cols-2 g-3 text-start">
+          <div class="col">
+            <ul class="list-unstyled fw-medium" style="color: #4F29B7;">
+              <li class="mb-2">
+                <a href="https://tuwaiq.edu.sa/form/YxdJKJwy" class="text-decoration-none text-reset">شارك كمدرب</a>
+              </li>
+              <li>
+                <a href="/about" class="text-decoration-none text-reset">حول الأكاديمية</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="list-unstyled fw-medium" style="color: #4F29B7;">
+              <li class="mb-2">
+                <a href="/privacy" class="text-decoration-none text-reset">سياسة الخصوصية</a>
+              </li>
+              <li>
+                <a href="/terms" class="text-decoration-none text-reset">الشروط والأحكام</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4 border-secondary-subtle" />
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-3 mb-md-0 small" style="color: #4F29B7;">
+        © 2025 <a href="https://tuwaiq.edu.sa/" class="text-decoration-none text-reset">أكاديمية طويق</a>.
+        جميع الحقوق محفوظة.
+      </p>
+      <div class="d-flex gap-3">
+        <!-- Social Icons -->
+        <a href="https://www.linkedin.com/company/tuwaiqacademy" class="d-inline-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: #4f29b7; width: 44px; height: 36px;">
+          <i class="bi bi-linkedin text-white"></i>
+        </a>
+        <a href="https://www.snapchat.com/add/tuwaiqacademy" class="d-inline-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: #4f29b7; width: 44px; height: 36px;">
+          <i class="bi bi-snapchat text-white"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UC_pOwgeaVK7bg3z7fJB5N8w" class="d-inline-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: #4f29b7; width: 44px; height: 36px;">
+          <i class="bi bi-youtube text-white"></i>
+        </a>
+        <a href="https://twitter.com/TuwaiqAcademy" class="d-inline-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: #4f29b7; width: 44px; height: 36px;">
+          <i class="bi bi-twitter text-white"></i>
+        </a>
+        <a href="https://discord.gg/DWpUH7wFxj" class="d-inline-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: #4f29b7; width: 44px; height: 36px;">
+          <i class="bi bi-discord text-white"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>
