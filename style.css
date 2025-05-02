@@ -27,8 +27,7 @@ body::before {
 }
 
 body {
-  font-family: "IBM Plex Sans Arabic", "IBM Plex Sans Arabic Regular",
-    "IBM Plex Sans Arabic SemiBold", "IBM Plex Sans Arabic Bold" sans-serif;
+  font-family: 'IBM Plex Sans Arabic' !important;
   background-color:#F9FAFB;
   color: #101010;
   line-height: 1.6;
@@ -36,6 +35,8 @@ body {
   font-weight: 400;
   
 }
+
+
 
 @keyframes scrollX {
   0% {
@@ -60,11 +61,11 @@ body {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
+  display: none;  
 }
 
