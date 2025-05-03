@@ -474,3 +474,91 @@ body::before {
   font-weight: 200;
   font-size: 18px;
 }
+.stat-box {
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 170px;
+}
+
+.stat-box h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-box p {
+  margin-bottom: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.stat-box .value {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.icon-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+  font-size: 2.75rem;
+  opacity: 0.3;
+}
+
+.bg-green-light {
+  background-color: #D3F5D5;
+  color: #8FD393;
+}
+
+.bg-blue-light {
+  background-color: #BDD7FF;
+  color: #4A90E2;
+}
+
+.bg-purple-light {
+  background-color: #EBDDFD;
+  color: #7A4BCB;
+}
+
+.partner-card {
+  border-radius: 1.5rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.02);
+}
+
+.partner-img-container img {
+  max-height: 60px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.partner-badge {
+  display: inline-block;
+  background-color: #f1efff;
+  color: #4f29b7;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
+  margin: 0.25rem 0.25rem 0 0;
+  white-space: nowrap;
+}
+
+.partner-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.partner-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
