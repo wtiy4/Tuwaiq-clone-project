@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>أكاديمية طويق</title>
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #F0EAFE;
+            height: 2px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #B297FF;
+            border-radius: 10px;
+        }
+
+        :root {
+            --primary-green: #8fd393;
+            --accent-green: #d3f5d5;
+            --primary-blue: #bed9ff;
+            --accent-blue: #5c90d8;
+            --primary-mauve: #e7ddff;
+            --accent-mauve: #6433d3;
+        }
+
+        body {
+            font-family: "IBM Plex Sans Arabic", sans-serif;
+        }
+
+        .card {
+            background-color: r;
+            border-radius: 15px;
+            padding: 20px;
+            height: 100%;
+        }
+
+
+
+        .bg-lightblue {
+            background-color: var(--primary-blue);
+        }
+
+        .bg-lightgreen {
+            background-color: var(--accent-green);
+        }
+
+        .bg-lavender {
+            background-color: var(--primary-mauve);
+        }
+
+        .stats {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c65c8;
+        }
+
+
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+
+        .last {
+            background-color: #F3F8FE;
+            min-height: 40vh;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 0 20px;
+            border-radius: 8px;
+            margin: 100px auto;
+        }
+
+        .last p {
+            color: #898989;
+            font-weight: 200;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur border-b border-gray-200">
+        <nav class="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="أكاديمية طويق" width="152"
+                height="32" class="h-8 w-auto" />
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="index.html" class="text-gray-900 hover:text-[#4931AF] transition">الرئيسية</a>
+                <a href="about.html"
+                    class="bg-[#4931AF] text-white px-5 py-2 rounded-full transition hover:bg-[#3b1f8a]">حول
+                    الأكاديمية</a>
+                <a href="#" class="text-gray-900 hover:text-[#4931AF] transition">الأكاديميات التابعة</a>
+                <a href="#" class="text-gray-900 hover:text-[#4931AF] transition">مركز الاختبارات</a>
+                <a href="partners.html" class="text-gray-900 hover:text-[#4931AF] transition">الشراكات</a>
+                <a href="#" class="text-gray-900 hover:text-[#4931AF] transition">الاعتمادات</a>
+                <span class="w-px h-6 bg-gray-300"></span>
+                <button
+                    class="bg-[#E9DDFC] text-[#4F29B7] px-4 py-1.5 rounded-xl text-sm hover:bg-[#d3bdf9]">En</button>
+            </div>
+
+            <!-- Mobile CTA & Menu Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="/signin"
+                    class="px-5 py-2 rounded-lg bg-[#4F29B7] text-white hover:bg-[#3b1f8a] transition text-sm font-medium">تسجيل
+                    الدخول</a>
+                <button class="md:hidden text-gray-700 focus:outline-none" id="mobileMenuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="md:hidden hidden bg-white border-t border-gray-200 py-2" id="mobileMenu">
+            <div class="flex flex-col space-y-3 px-4">
+                <a href="/" class="text-[#4931AF] font-medium py-2">الرئيسية</a>
+                <a href="/about" class="text-gray-900 py-2">حول الأكاديمية</a>
+                <a href="/schools" class="text-gray-900 py-2">الأكاديميات التابعة</a>
+                <a href="/testcenter" class="text-gray-900 py-2">مركز الاختبارات</a>
+                <a href="/partners" class="text-gray-900 py-2">الشراكات</a>
+                <a href="/accreditations" class="text-gray-900 py-2">الاعتمادات</a>
+                <button class="bg-[#E9DDFC] text-[#4F29B7] px-4 py-1.5 rounded-xl text-sm self-start">En</button>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <div class="container py-5">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card bg-lightblue text-center">
+                    <h5 class="mb-2">عدد الطلاب يومياً</h5>
+                    <p class="text-muted">طالب وطالبة</p>
+                    <div class="stats" style="color: var(--accent-blue); font-size: 40px;">+1200</div>
+                    <div class="icon"><i class="fas fa-users" style="color: var(--accent-blue); font-size: 80px;"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card bg-lightgreen text-center">
+                    <h5 class="mb-2">هيئة التدريس</h5>
+                    <p class="text-muted">عدد الأعضاء</p>
+                    <div class="stats" style="color: #8fd393; font-size: 40px;">+50</div>
+                    <div class="icon"><i class="fa-solid fa-chart-simple" style="color: #8fd393; font-size: 80px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-lavender text-center">
+                    <h5 class="mb-2">تسجيل في البرنامج الواحد</h5>
+                    <p class="text-muted">طالب وطالبة</p>
+                    <div class="stats" style="color: var(--accent-mauve); font-size: 40px;">+5000</div>
+                    <div class="icon"><i class="fa-solid fa-suitcase-rolling"
+                            style="color: var(--accent-mauve); font-size: 80px;"></i></div>
+
+                </div>
+            </div>
+
+            <div class="col-12">
+                <video class="rounded" width="50%" autoplay loop muted playsinline>
+                    <source src="./imgs/introS3.mp4" type="video/mp4">
+                    المتصفح لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5" style="background-color: #F5F5F7;">
+        <div class="container text-right">
+            <h2 class="fw-bold mb-3 fs-1">من نحن؟</h2>
+            <p class=" text-right" style="font-size: 18px;">
+                تُعد أكاديمية طويق الأولى في البرامج التعليمية لمجالات التقنيات المتقدمة بالمملكة العربية السعودية،
+                حيث
+                تقدّم عددًا من البرامج المتنوّعة في مختلف المسارات التقنية ولمختلف الفئات العمرية؛ وتم الإعلان عن
+                تأسيس
+                الأكاديمية في أغسطس من عام 2019م.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-right mb-4 fs-1 mb-5 mt-5">ماذا نقدم؟</h2>
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fs-3">المعسكرات</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fs-3">البرامج التدريبية</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fs-3">التعليم الإلكتروني</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fs-3">اللقاءات المعرفية</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fs-3">المجتمعات الرقمية</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title mb-0 fs-3">المنافسات العالمية</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="competition-section text-end">
+        <div class="container" style="height: 40%;background-color: #F5F5F7; width: 100%;padding-bottom: 40px;">
+            <h2 class=" section-title text-right fs-1 fw-bold mb-5 mt-5">المنافسات العالمية</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="card-title">الفوز بجوائز تحدي علوم المستقبل</h5>
+                        <p class="card-text text-muted">المركز الأول لفئة الناشئين بطل تحدي علوم المستقبل</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="card-title">تحطيم رقم قياسي عالمي في موسوعة غينيس</h5>
+                        <p class="card-text text-muted">أكثر من 750 مستفيد</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5 class="card-title">المعرض الدولي للاختراع والابتكار والتكنولوجيا "ITEX"</h5>
+                        <p class="card-text text-muted">9 ميداليات ذهبية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="last">
+        <div class="inline">
+            <h1 class="fs-1 mb-5 ">موقع أكاديمية طويق </h1>
+            <p>المملكة العربية السعودية - حي مطار الملك خالد</p>
+            <p>جامعة الأميرة نورة بنت عبد الرحمن</p>
+            <p>المبنى: 3446</p>
+            <p>الرمز البريدي: 13415</p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d905.073656729936!2d46.713489!3d24.853785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2sTuwaiq%20Academy!5e0!3m2!1sen!2ssa!4v1746298805845!5m2!1sen!2ssa"
+            width="500" height="300" style="border:0; border-radius: 9px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="w-full max-w-[1680px] mx-auto sm:mb-4 px-4 sm:px-0 pb-4 mt-10">
+        <div class="bg-[#E3D8FF] rounded-3xl overflow-hidden">
+            <div class="w-full max-w-7xl mx-auto p-6 lg:p-8">
+                <!-- Top Section with Logo and Links -->
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                    <!-- Logo -->
+                    <div class="mb-6 md:mb-0">
+                        <a href="/" class="flex items-center justify-center">
+                            <img src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png" alt="Tuwaiq Academy"
+                                class="h-16">
+                        </a>
+                    </div>
+
+                    <!-- Links Section -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16">
+                        <!-- Column 1 -->
+                        <div>
+                            <ul class="text-[#4F29B7] font-medium text-center sm:text-right">
+                                <li class="mb-4">
+                                    <a href="https://tuwaiq.edu.sa/form/YxdJKJwy"
+                                        class="hover:underline transition-all duration-300">شارك كمدرب</a>
+                                </li>
+                                <li>
+                                    <a href="/about" class="hover:underline transition-all duration-300">حول
+                                        الأكاديمية</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div>
+                            <ul class="text-[#4F29B7] font-medium text-center sm:text-right">
+                                <li class="mb-4">
+                                    <a href="/privacy" class="hover:underline transition-all duration-300">سياسة
+                                        الخصوصية</a>
+                                </li>
+                                <li>
+                                    <a href="/terms" class="hover:underline transition-all duration-300">الشروط
+                                        والأحكام</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8">
+                <!-- Bottom Section with Copyright and Social Media -->
+                <div class="flex flex-col-reverse md:flex-row md:justify-between items-center">
+                    <!-- Copyright -->
+                    <span class="text-sm mt-6 md:mt-0 text-[#4F29B7] text-center md:text-right">
+                        © 2025 <a href="https://tuwaiq.edu.sa/" class="hover:underline">أكاديمية طويق</a>.
+                        جميع الحقوق محفوظة.
+                    </span>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/tuwaiqacademy" class="transition-all duration-300"
+                            aria-label="LinkedIn">
+                            <div
+                                class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+                        </a>
+
+                        <!-- Snapchat -->
+                        <a href="https://www.snapchat.com/add/tuwaiqacademy" class="transition-all duration-300"
+                            aria-label="Snapchat">
+                            <div
+                                class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
+                                <i class="bi bi-snapchat"></i>
+                            </div>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/channel/UC_pOwgeaVK7bg3z7fJB5N8w"
+                            class="transition-all duration-300" aria-label="YouTube">
+                            <div
+                                class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
+                                <i class="bi bi-youtube"></i>
+                            </div>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/TuwaiqAcademy" class="transition-all duration-300"
+                            aria-label="Twitter">
+                            <div
+                                class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
+                                <i class="bi bi-twitter-x"></i>
+                            </div>
+                        </a>
+
+                        <!-- Discord -->
+                        <a href="https://discord.gg/DWpUH7wFxj" class="transition-all duration-300"
+                            aria-label="Discord">
+                            <div
+                                class="w-10 h-10 bg-[#4F29B7] hover:bg-[#8869dd] rounded-full flex items-center justify-center text-white">
+                                <i class="bi bi-discord"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
