@@ -1,10 +1,8 @@
-/* Base responsive styles */
 :root {
   --container-padding: clamp(1rem, 5vw, 2rem);
   --section-spacing: clamp(2rem, 8vw, 5rem);
 }
 
-/* Responsive typography */
 html {
   font-size: 16px;
 }
@@ -15,7 +13,6 @@ html {
   }
 }
 
-/* Container widths */
 .container {
   width: 100%;
   max-width: 1680px;
@@ -23,12 +20,10 @@ html {
   margin: 0 auto;
 }
 
-/* Responsive grid layouts */
 .row {
   margin: 0 -0.75rem;
 }
 
-/* Hero section responsive fixes */
 .hero-content {
   padding: clamp(2rem, 5vw, 5rem);
 }
@@ -45,7 +40,6 @@ html {
   }
 }
 
-/* Cards section responsive */
 @media (max-width: 768px) {
   .card {
     min-height: auto;
@@ -56,7 +50,6 @@ html {
   }
 }
 
-/* Course carousel responsive */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -73,7 +66,6 @@ html {
   }
 }
 
-/* Numbers section responsive */
 @media (max-width: 992px) {
   .stats-card {
     min-height: 250px;
@@ -84,7 +76,6 @@ html {
   }
 }
 
-/* Newsletter section responsive */
 @media (max-width: 768px) {
   .newsletter-form {
     flex-direction: column;
@@ -96,7 +87,6 @@ html {
   }
 }
 
-/* Footer responsive */
 @media (max-width: 768px) {
   .footer-content {
     text-align: center;
@@ -108,7 +98,6 @@ html {
   }
 }
 
-/* Utility classes */
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -376,7 +365,6 @@ html {
     display: -webkit-box;
 }
 
-/* 3) Body grid overlay */
 body::before {
     --size: 120px;
     --line: color-mix(in lch, canvasText, transparent 90%);
