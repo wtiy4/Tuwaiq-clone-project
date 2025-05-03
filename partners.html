@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <header
+      class="sticky-top border-bottom"
+      style="
+        backdrop-filter: blur(12px);
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 1000;
+      "
+    >
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand order-3 order-lg-1 ms-lg-3" href="/">
+            <img
+              src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png"
+              alt="أكاديمية طويق"
+              class="img-fluid"
+              style="height: 48px"
+            />
+          </a>
+
+          <div
+            class="collapse navbar-collapse justify-content-center order-2"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center gap-3 fw-medium">
+              <li class="nav-item">
+                <a
+                  href="/"
+                  class="btn bg-purple text-white px-4 rounded-pill active-link"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/about.html" class="nav-link text-dark px-2"
+                  >حول الأكاديمية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/schools" class="nav-link text-dark px-2"
+                  >الأكاديميات التابعة</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/testcenter" class="nav-link text-dark px-2"
+                  >مركز الاختبارات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/partners.html" class="nav-link text-dark px-2"
+                  >الشراكات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/accreditations" class="nav-link text-dark px-2"
+                  >الاعتمادات</a
+                >
+              </li>
+              <li class="nav-item">
+                <span class="vr mx-2"></span>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn bg-light border border-light text-purple px-3 py-1 rounded-pill fw-bold lang-switch"
+                >
+                  En
+                </button>
+              </li>
+            </ul>
+
+            <!-- Mobile-only inside collapse -->
+            <div class="d-lg-none mt-3 w-100 d-flex flex-column gap-2">
+              <button
+                class="btn bg-light border border-light text-purple px-3 py-2 rounded-pill w-100"
+              >
+                En
+              </button>
+              <a href="/signin" class="btn bg-deep-purple text-white w-100"
+                >تسجيل الدخول</a
+              >
+            </div>
+          </div>
+
+          <!-- Left: Desktop login -->
+          <div class="d-none d-lg-block order-lg-3">
+            <a
+              href="/signin"
+              class="btn bg-deep-purple text-white px-4 rounded-pill signin-btn"
+              >تسجيل الدخول</a
+            >
+          </div>
+
+          <!-- Mobile toggle -->
+          <button
+            class="navbar-toggler order-1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container py-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">الشراكات</h2>
+          <p class="partner-intro">
+            العديد من الشراكات لأكاديمية طويق مع كبرى الجهات التقنية العالمية؛
+            التي تهدف إلى تطوير مهارات وخبرات القدرات الوطنية من خلال معسكرات
+            وبرامج تُعد الأولى من نوعها في مجالات التقنيات الحديثة وتدعم
+            احتياجات سوق العمل.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img src="./imgs/companys.png" class="img-fluid" alt="شراكات طويق" />
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Meta</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/meta.png" alt="Meta Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">تطوير التطبيقات</span>
+              <span class="partner-badge"
+                >العوالم المعززة والعوالم الافتراضية VR - AR</span
+              >
+              <span class="partner-badge">تطوير البرمجيات</span>
+            </div>
+            <p>
+              أول أكاديمية من شركة "ميتا" في الشرق الأوسط وشمال أفريقيا؛ لتطوير
+              وتأهيل القدرات الوطنية بمجالات الذكاء الاصطناعي والعوالم
+              الافتراضية.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Microsoft</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/microsoft.png" alt="Microsoft Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الحوسبة السحابية</span>
+              <span class="partner-badge">الذكاء الاصطناعي</span>
+            </div>
+            <p>
+              شراكة تهدف إلى إقامة برامج ومعسكرات تدريبية في مجالات الحوسبة
+              السحابية والذكاء الاصطناعي وتحليل البيانات، بشهادات احترافية من
+              مايكروسوفت.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Alibaba cloud</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/alibaba-cloud.png" alt="Alibaba Cloud Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الحوسبة السحابية</span>
+              <span class="partner-badge">علم الآلة والذكاء الاصطناعي</span>
+            </div>
+            <p>
+              أول أكاديمية من شركة "علي بابا كلاود" في الشرق الأوسط وشمال
+              أفريقيا؛ بهدف تطوير الكوادر الوطنية عبر معسكرات وبرامج احترافية في
+              الحوسبة السحابية.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">F5</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/f5.png" alt="F5 Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الأمن السيبراني</span>
+            </div>
+            <p>
+              شراكة مع شركة F5 لإقامة برامج نوعية في مجال الأمن السيبراني
+              بشهادات احترافية لتأهيل سوق العمل.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Juniper Network</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/juniper-network.png" alt="Juniper Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">أنظمة الشبكات</span>
+            </div>
+            <p>
+              شراكة لتدريب الكوادر الوطنية في الشبكات والأنظمة والذكاء الاصطناعي
+              بشهادات من شركة Juniper.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">CertNexus</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/certnexus.png" alt="CertNexus Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الأمن السيبراني</span>
+              <span class="partner-badge">الذكاء الاصطناعي</span>
+            </div>
+            <p>
+              شراكة تهدف إلى تقديم برامج احترافية في الأمن السيبراني وإنترنت
+              الأشياء والذكاء الاصطناعي لتأهيل القدرات الوطنية.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">RedHat</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/redhat.png" alt="RedHat Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الأمن السيبراني</span>
+            </div>
+            <p>
+              شراكة تهدف إلى تحسين الفرص الوظيفية للقدرات الوطنية في مجال الأمن
+              السيبراني؛ عبر إقامة معسكرات احترافية بشهادات معتمدة من شركة "ريد
+              هات".
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Apple</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/apple.png" alt="Apple Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">هندسة البرمجيات</span>
+              <span class="partner-badge">تطوير البرمجيات والتطبيقات</span>
+            </div>
+            <p>
+              أول أكاديمية من شركة "آبل" في الشرق الأوسط وشمال أفريقيا؛ لبناء
+              قدرات تقنية تطور حلولاً مبتكرة لخدمة مختلف فئات المجتمع باستخدام
+              تقنيات آبل.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Dell</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/dell.png" alt="Dell Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">علم الآلة والذكاء الاصطناعي</span>
+              <span class="partner-badge">علم البيانات وتحليلها</span>
+            </div>
+            <p>
+              شراكة تهدف إلى إقامة معسكرات وبرامج متخصصة في مجالات تحليل
+              البيانات والذكاء الاصطناعي والحلول التقنية المتقدمة بشهادات معتمدة
+              من "ديل".
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Stanford University</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/stanford-university.png" alt="Stanford Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">علم الآلة والذكاء الاصطناعي</span>
+              <span class="partner-badge">علم البيانات وتحليلها</span>
+            </div>
+            <p>
+              شراكة تهدف إلى إقامة معسكرات احترافية في مجالات التقنيات الحديثة
+              بنظام التعليم المدمج (حضوري / عن بُعد) بشهادات معتمدة من "جامعة
+              ستانفورد".
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Offsec</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/offsec.png" alt="Offsec Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الأمن السيبراني</span>
+            </div>
+            <p>
+              شراكة تهدف إلى تخريج كوادر وطنية متميزة في مجال الأمن السيبراني،
+              بالإضافة إلى فرصة الحصول على أهم الشهادات الاحترافية المعتمدة من
+              شركة "أوفنسف".
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="partner-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="m-0">Amazon</h3>
+              <div class="partner-img-container">
+                <img src="./imgs/amazon.png" alt="Amazon Logo" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <span class="partner-badge">الحوسبة السحابية</span>
+            </div>
+            <p>
+              أول أكاديمية من شركة "أمازون" في منطقة الشرق الأوسط؛ لإقامة
+              معسكرات وبرامج متخصّصة لتطوير القدرات الوطنية في مجال الحوسبة
+              السحابية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="container px-3 px-sm-0 py-5 mt-5"
+      style="
+        background-color: #ebddfd;
+        border-radius: 1.5rem 1.5rem 0 0;
+        max-width: 1680px;
+      "
+    >
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4"
+        >
+          <div class="mb-4 mb-md-0 text-center text-md-start">
+            <img
+              src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png"
+              alt="Tuwaiq"
+              style="height: 5rem"
+            />
+          </div>
+
+          <div class="d-flex flex-wrap gap-4 text-center text-md-start">
+            <div
+              class="d-flex flex-column gap-2 fw-medium"
+              style="color: #4f29b7"
+            >
+              <a
+                href="https://tuwaiq.edu.sa/form/YxdJKJwy"
+                class="text-decoration-none text-reset"
+                >شارك كمدرب</a
+              >
+              <a href="/about" class="text-decoration-none text-reset"
+                >حول الأكاديمية</a
+              >
+            </div>
+            <div
+              class="d-flex flex-column gap-2 fw-medium"
+              style="color: #4f29b7"
+            >
+              <a href="/privacy" class="text-decoration-none text-reset"
+                >سياسة الخصوصية</a
+              >
+              <a href="/terms" class="text-decoration-none text-reset"
+                >الشروط والأحكام</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4 border-secondary-subtle" />
+
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center"
+        >
+          <p class="mb-3 mb-md-0 small fw-medium" style="color: #4f29b7">
+            © 2025
+            <a
+              href="https://tuwaiq.edu.sa/"
+              class="text-decoration-none text-reset"
+              >أكاديمية طويق</a
+            >. جميع الحقوق محفوظة.
+          </p>
+
+          <div class="d-flex gap-3">
+            <a
+              href="https://linkedin.com/company/tuwaiqacademy"
+              class="footer-icon"
+              ><i class="bi bi-linkedin text-white"></i
+            ></a>
+            <a
+              href="https://www.snapchat.com/add/tuwaiqacademy"
+              class="footer-icon"
+              ><i class="bi bi-snapchat text-white"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UC_pOwgeaVK7bg3z7fJB5N8w"
+              class="footer-icon"
+              ><i class="bi bi-youtube text-white"></i
+            ></a>
+            <a href="https://twitter.com/TuwaiqAcademy" class="footer-icon"
+              ><i class="bi bi-twitter-x text-white"></i
+            ></a>
+            <a href="https://discord.gg/DWpUH7wFxj" class="footer-icon"
+              ><i class="bi bi-discord text-white"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
