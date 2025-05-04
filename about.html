@@ -35,108 +35,103 @@
 
   <body>
     <header
-    class="sticky-top border-bottom"
-    style="
-      backdrop-filter: blur(12px);
-      background-color: rgba(255, 255, 255, 0.8);
-      z-index: 1000;
-    "
-  >
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand order-3 order-lg-1 ms-lg-3" href="/">
-          <img
-            src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png"
-            alt="أكاديمية طويق"
-            class="img-fluid"
-            style="height: 48px"
-          />
-        </a>
+      class="sticky-top border-bottom"
+      style="
+        backdrop-filter: blur(12px);
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 1000;
+      "
+    >
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand order-3 order-lg-1 ms-lg-3" href="/">
+            <img
+              src="https://cdn.tuwaiq.edu.sa/landing/images/logo/logo-h.png"
+              alt="أكاديمية طويق"
+              class="img-fluid"
+              style="height: 48px"
+            />
+          </a>
 
-        <div
-          class="collapse navbar-collapse justify-content-center order-2"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center gap-3 fw-medium">
-            <li class="nav-item">
-              <a
-                href="index.html"
-                class="btn bg-purple text-white px-4 rounded-pill active-link"
-                >الرئيسية</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link text-dark px-2"
-                >حول الأكاديمية</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="/schools" class="nav-link text-dark px-2"
-                >الأكاديميات التابعة</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="/testcenter" class="nav-link text-dark px-2"
-                >مركز الاختبارات</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="partners.html" class="nav-link text-dark px-2">الشراكات</a>
-            </li>
-            <li class="nav-item">
-              <a href="/accreditations" class="nav-link text-dark px-2"
-                >الاعتمادات</a
-              >
-            </li>
-            <li class="nav-item">
-              <span class="vr mx-2"></span>
-            </li>
-            <li class="nav-item">
-              <button
-                class="btn bg-light border border-light text-purple px-3 py-1 rounded-pill fw-bold lang-switch"
-              >
-                En
-              </button>
-            </li>
-          </ul>
+          <div
+            class="collapse navbar-collapse justify-content-center order-2"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center gap-3 fw-medium">
+              <li class="nav-item">
+                <a
+                  href="index.html"
+                  class="btn bg-purple text-white px-4 rounded-pill active-link"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link text-dark px-2"
+                  >حول الأكاديمية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/schools" class="nav-link text-dark px-2"
+                  >الأكاديميات التابعة</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/testcenter" class="nav-link text-dark px-2"
+                  >مركز الاختبارات</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="partners.html" class="nav-link text-dark px-2">الشراكات</a>
+              </li>
+              <li class="nav-item">
+                <a href="/accreditations" class="nav-link text-dark px-2"
+                  >الاعتمادات</a
+                >
+              </li>
+             
+              <li class="nav-item">
+                <button
+                  class="btn bg-light border border-light text-purple px-3 py-1 rounded-pill fw-bold lang-switch"
+                >
+                  En
+                </button>
+              </li>
+            </ul>
 
-          <!-- Mobile-only inside collapse -->
-          <div class="d-lg-none mt-3 w-100 d-flex flex-column gap-2">
-            <button
-              class="btn bg-light border border-light text-purple px-3 py-2 rounded-pill w-100"
-            >
-              En
-            </button>
-            <a href="/signin" class="btn bg-deep-purple text-white w-100"
+            <!-- Mobile-only inside collapse -->
+            <div class="d-lg-none mt-3 w-100 d-flex flex-column gap-2">
+            
+              <a href="/signin" class="btn bg-deep-purple text-white w-100"
+                >تسجيل الدخول</a
+              >
+            </div>
+          </div>
+
+          <!-- Left: Desktop login -->
+          <div class="d-none d-lg-block order-lg-3">
+            <a
+              href="/signin"
+              class="btn bg-deep-purple text-white px-4 rounded-pill signin-btn"
               >تسجيل الدخول</a
             >
           </div>
-        </div>
 
-        <!-- Left: Desktop login -->
-        <div class="d-none d-lg-block order-lg-3">
-          <a
-            href="/signin"
-            class="btn bg-deep-purple text-white px-4 rounded-pill signin-btn"
-            >تسجيل الدخول</a
+          <!-- Mobile toggle -->
+          <button
+            class="navbar-toggler order-1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+      </nav>
+    </header>
 
-        <!-- Mobile toggle -->
-        <button
-          class="navbar-toggler order-1"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
-  </header>
 
 
     <section class="container">
